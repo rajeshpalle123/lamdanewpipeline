@@ -7,7 +7,7 @@ phases:
   commands:
    - sam build
    - export BUCKET=pipeline-output-bucket1321
-   - sam package --s3-bucket $BUCKET --output-template-file outputtemplate.yml
+   - sam package --s3-bucket pipeline-output-bucket1321 --output-template-file outputtemplate.yml
 
 artifacts:
  type: zip
