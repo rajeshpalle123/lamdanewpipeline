@@ -7,8 +7,7 @@ phases:
   commands:
    - sam build
    - export BUCKET=pipeline-output-bucket1321
-   - aws cloudformation package --template-file template.yml --s3-bucket pipeline-output-bucket1321 \
-                --output-template-file outputtemplate.yml
+   - aws cloudformation package --template-file template.yml --s3-bucket pipeline-output-bucket1321 
 
 artifacts:
  type: zip
