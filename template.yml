@@ -33,7 +33,7 @@ Resources:
                 Resource: '*'
 
   # Lambda
- SampleFunction:
+lamda:
   Type: AWS::Serverless::Function
   Properties:
    Handler: Index.lambda_handler
