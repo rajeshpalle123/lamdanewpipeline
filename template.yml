@@ -33,15 +33,10 @@ Resources:
                 Resource: '*'
 
   # Lambda
-  Lambda:
-    Type: AWS::Lambda::Function
-    Properties:
-      FunctionName: "lambda-example"
-      Description: "Lambda example"
-      Code: ./src/
-      Handler: lambda.handler
-      Runtime: python3.9
-      Timeout: 900
-      Role: !GetAtt LambdaRole.Arn
-      PackageType: Zip
-      MemorySize: 128
+ SampleFunction:
+  Type: AWS::Serverless::Function
+  Properties:
+   Handler: Index.lambda_handler
+   Runtime: python3.7
+   FunctionName: SamplePython
+   CodeUri: ./src #Directory the source file is
